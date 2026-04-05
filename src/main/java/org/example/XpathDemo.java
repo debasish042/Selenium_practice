@@ -32,14 +32,72 @@ public class XpathDemo {
 
             // xpath with inner text
 
-            driver.findElement(By.xpath("//a[text()='Practice']")).click();
+            /*driver.findElement(By.xpath("//a[text()='Practice']")).click();*/
+
+
+
+
+           /* // xpath with contains
+            // Correct usage of contains() is contains(@attr,'value'), not @contains(...)
+            driver.findElement(By.xpath("//*[contains(@id,'username')]"))
+                    .sendKeys("student");
+            driver.findElement(By.xpath("//*[contains(@name,'password')]"))
+                    .sendKeys("Password123");
+            driver.findElement(By.xpath("//*[contains(@class,'btn') and @id='submit']")).click();*/
+
+            /*
+            * using inner text --
+
+              driver.findElement(By.xpath("//*[text()='username']")).sendKeys("username");
+
+
+              using contains method ---
+
+              driver.findElement(By.xpath("//*[contains(@id,'username')]")).sendKeys("username");
+              *
+              * driver.findElement(By.xpath("//*[contains(text(),'')]"));
+              *
+              * driver.findElement(By.xpath("//*[contains(.,'')]"));
+              *
+              * check if there is any element present with blank text
+              *
+              *
+              *
+
+*
+*
+
+           using starts-with ---
+
+           driver.findElement(By.xpath("//*[starts-with(@id,'username')]")).sendKeys("username");
+            *
+            * */
+
+
+            // by using chained xpath
+
+         /* boolean status=  driver.findElement(By.xpath("//*[@id='site-title']/a/img")).isDisplayed();
+
+          System.out.println(status);*/
+
+
+            driver.findElement(By.xpath("//*[@id='form']//*[@id='username']")).sendKeys("student");
+            driver.findElement(By.xpath("//*[@id='form']//*[@id='password']")).sendKeys("Password123");
+            driver.findElement(By.xpath("//*[@id='form']//*[@id='submit']")).click();
+
+
 
 
 
 
             try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
         } finally {
-            /*driver.quit();*/
+            if (driver != null) {
+                try {
+                    driver.quit();
+                } catch (Exception ignored) {
+                }
+            }
         }
     }
 }
