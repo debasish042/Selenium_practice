@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+
+<suite name="SeleniumSuite">
+  <test name="TestNgTests">
+    <classes>
+      <class name="org.example.FluentWaitTest"/>
+      <class name="TestNG.FirstTestCase"/>
+      <class name ="TestNG.SecondClass"/>
+      <class  name="TestNG.OrangeHrmTest"/>
+    </classes>
+  </test>
+</suite>
+
+
+<!-- if we run the TestNg test using this xml file then two reports will be generated one is index.html and emailable-report.html  -->
+
+
+
