@@ -16,6 +16,7 @@
 
 
 <!-- if we run the TestNg test using this xml file then two reports will be generated one is index.html and emailable-report.html  -->
+<!--According to xml file test is collection of test classes -->
 
 
 

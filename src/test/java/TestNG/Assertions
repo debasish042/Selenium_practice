@@ -1,0 +1,35 @@
+Assertion means validation
+
+
+Types of assertion
+
+1. Hard Assertion
+2.Soft Assertion
+
+Hard Assertion ----
+=====================
+
+We can access it from Assert class
+
+Assert.assertEquals(true,true);
+Assert.assertTrue(true);
+Assert.assertNotEquals(true,false);
+
+
+Method are static
+
+* If hard assertion failed test of rest of the statement will not be executed
+
+
+Soft Assertion
+
+-> We can access it through SoftAssert object
+
+-> SoftAssert sf = new SoftAssert();
+
+sf.assertTrue();
+
+sf.assertAll();
+
+--> If soft assert will fail rest of the statements will be exeute
+

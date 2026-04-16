@@ -1,0 +1,14 @@
+dependency methods will be there
+
+if one method depend on execution of another method then if the dependent
+ method is failed then execution of this method will be skipped
+
+
+ We can write dependent method by
+
+ @Test(priority =1 , dependsOnMethods={"login","Search"})
+ void Search(){
+
+ }
+
+

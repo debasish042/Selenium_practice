@@ -1,0 +1,75 @@
+
+@Test --
+
+@BeforeMethod
+
+@AfterMethod
+
+@BeforeClass
+
+@AfterClass
+
+@BeforeTest
+
+@AfterTest
+
+@BeforeSuite
+
+@AfterSuite
+
+
+@BeforeMethod
+This will execute before execution of every method
+@AfterMethod
+This will execute after execution of every Method
+TC1
+
+1.LogIn to Application  ----> We need to execute this before starting every method of class
+   So annote it with----> @BeforeMethod
+2. Search Functionality   ----> @Test
+
+3.LogOut From Application
+
+4. LogIn
+
+5. Adv Test  -----> @Test
+
+6. LogOut ---  We will do this after completion of every test
+
+  So use -------->   @AfterMethod
+
+
+@BeforeClass
+
+@AfterClass --> This annotation is not necessary if we don't have to execute any other methods except quit
+
+
+This two annotation will execute only once the test methods before and after execution of all test methods
+
+
+TC2---
+=====================================
+1.login  ---------> @BeforeClass
+2.search ---> @Test
+3.Advanced Search ----> @Test
+4.logout      ------>@AfterClass
+
+
+
+@BeforeTest
+
+@AfterTest
+
+
+heirarchy of Testing in testNg
+
+@BeforeSuite
+@BeforeTest
+@BeforeClass
+@BeforeMethod
+@Test
+@AfterMethod
+@AfterClass
+@AfterTest
+@AfterSuite
+
